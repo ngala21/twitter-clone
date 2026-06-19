@@ -7,31 +7,48 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="main">
-      <div class="leftie">
-        <div class="twitter">
-          <div class="twitter-branding">
-            <!-- logo -->
-            <h2>log In</h2>
+    <div class="login-page">
+      <div class="login-container">
+        <div class="login-panel">
+          <div class="login-card">
+            <div class="logo-container">
+              <svg
+                class="logo"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 1227"
+                aria-label="X Logo"
+                role="img"
+              >
+                <path
+                  fill="currentColor"
+                  d="M714.163 519.284L1160.89 0H1055.17L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.726L515.454 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.038 687.828L521.637 620.013L144.011 79.6944H306.615L611.406 515.79L658.807 583.605L1055.22 1150.69H892.615L569.038 687.854V687.828Z"
+                />
+              </svg>
+            </div>
+            <h1 class="login-title">Log In</h1>
+            <div class="login-form">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                id="email"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="password"
+                required
+              />
+              <button id="login-btn" class="login-btn">Log In</button>
+            </div>
+            <p class="signup-text">
+              Don't have an account? <a href="./signup.html">Sign Up</a>
+            </p>
           </div>
-          <div class="form">
-            <input
-              type="email"
-              password="Enter your email address"
-              id="email"
-            />
-            <input
-              type="password"
-              password="Enter your password"
-              id="password"
-            />
-          </div>
-          <button id="submit">Log In</button>
-          <p>Don't have an account? <a href="./signup.html">Sign Up</a></p>
         </div>
-      </div>
-      <div class="rightie">
-        <img src="./images/bgcover.jpg" alt="" />
+        <div class="hero-panel">
+          <img src="./images/bgcover.jpg" alt="Woman using a mobile phone" />
+        </div>
       </div>
     </div>
   </body>

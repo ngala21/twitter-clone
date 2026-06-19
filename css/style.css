@@ -61,10 +61,16 @@ body {
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  opacity: 1;
   background: transparent;
 }
 
+.login-form input::placeholder {
+  color: #fff;
+  padding-left: 10px;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .hero-panel {
   width: 50%;
   display: flex;

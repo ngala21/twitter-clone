@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twitter Clone | Home Page</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="main">
       <div class="container">
-        <div class="left">
+        <div class="left-sidebar">
           <div class="logo-container">
             <svg
               class="logo"
@@ -24,20 +31,35 @@
               />
             </svg>
           </div>
-          <div class="navbar">
+          <div class="navigation-menu"><div class="nav-link">
             <span>Home</span>
+          </div>
+          <div class="navigation-menu"><div class="nav-link">
             <span>Search</span>
+          </div>
+          <div class="navigation-menu"><div class="nav-link">
             <span>Notifications</span>
+          </div>
+          <div class="navigation-menu"><div class="nav-link">
             <span>Messages</span>
+          </div>
+          <div class="navigation-menu"><div class="nav-link">
             <span>Contact</span>
-            <button class="submit" id="logout">Log Out</button>
+          </div>
+            <button class="logout-btn" id="logout">Log Out</button>
           </div>
         </div>
-        <div class="center">
+        <div class="user-profile">
           <div class="posts">
             <div class="post">
-              <img src="" alt="Profile Picture" />
-              <span>What's happening?</span>
+              <img
+                class="profile-photo"
+                src="./images/profile-image.jpg"
+                alt="Profile Picture"
+              />
+              <div class="form">
+                <input type="text" id="text" placeholder="What's happening?" />
+              </div>
             </div>
           </div>
         </div>

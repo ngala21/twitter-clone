@@ -10,29 +10,37 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .main {
+.main {
   width: 100%;
-} */
+}
 
 .container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 20% 50% 30%;
-}
-
-.container > div {
-  padding: 20px;
-  text-align: center;
+  max-width: 1400px;
   height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 275px 1fr 350px;
 }
 
-.container > div:not(:last-child) {
-  border-right: 1px solid blue;
+.center-feed {
+  overflow-y: auto;
 }
 
+.left-sidebar,
+.center-feed {
+  border-right: 1px solid #2f3336;
+}
+
+/* Sidebar */
 .left-sidebar {
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
+}
+
+.logo-container {
+  width: 50px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -45,27 +53,124 @@ body {
 
 .navigation-menu {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  /* align-items: center; */
-  display: block;
-  gap: 20px;
+  gap: 10px;
 }
 
-.profile-photo {
-  width: 80px;
-  height: 80px;
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link span {
+  font-size: 1.3rem;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 999px;
+  background: #1d9bf0;
   color: #fff;
-  /* display: block; */
-  margin: 0 auto;
-  border-radius: 50px;
-  padding-right: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.user-profile {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px;
+  border-radius: 999px;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.user-info p {
+  color: #71767b;
+  font-size: 0.9rem;
 }
 
 .form {
   margin-top: -4rem;
 }
 
-/* .form input {
-  background-color: transparent;
-} */
+/* Post Composer */
+.create-post {
+  display: flex;
+  gap: 12px;
+
+  padding: 16px;
+
+  border-bottom: 1px solid #2f3336;
+}
+
+.profile-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.create-post-content {
+  flex: 1;
+}
+
+.post-input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* Toolbar */
+.post-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-tools {
+  display: flex;
+  gap: 18px;
+}
+
+.toolbar-icon {
+  width: 22px;
+  height: 22px;
+
+  color: #1d9bf0;
+  cursor: pointer;
+}
+
+.post-btn {
+  width: 85px;
+  height: 38px;
+  border: none;
+  border-radius: 999px;
+  background: #1d9bf0;
+  color: white;
+  font-weight: 700;
+}
+
+/* Tweet card */

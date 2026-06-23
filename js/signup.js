@@ -11,7 +11,25 @@ document.getElementById("signup").onclick = () => {
       // Signed in
       var user = userCredential.user;
       // ...
-      window.location.href = "index.html";
+
+      firebase
+        .firestore()
+        .collection("users")
+        .doc(user.uid)
+        .set({
+          name,
+          email: user.email,
+          userId: user.uid,
+          createdAt: user.metadata.creationTime,
+        })
+        .then(() => {
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.error(errorMessage);
+        });
     })
     .catch((error) => {
       var errorCode = error.code;

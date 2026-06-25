@@ -63,7 +63,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // ..
     function generateTweetHTML(tweet) {
       return `
-        <div class="tweet">
+        <div class="tweet"> 
               <img
                 src="./images/profile-image.jpg"
                 class="tweet-avatar"

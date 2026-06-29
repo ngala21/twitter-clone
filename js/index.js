@@ -46,24 +46,25 @@ firebase.auth().onAuthStateChanged((user) => {
       .get()
       .then((queryTweets) => {
         queryTweets.forEach((tweetDoc) => {
+          let tweetid = tweetDoc.id;
           let tweet = tweetDoc.data();
           // console.log(tweet);
 
-          let tweetHTML = generateTweetHTML(tweet);
+          let tweetHtml = generateTweetHTML(tweet, tweetid);
 
           //* Append each tweet to our tweetContainer
           document
             .getElementById("tweetContainer")
-            .insertAdjacentHTML("afterbegin", tweetHTML);
+            .insertAdjacentHTML("afterbegin", tweetHtml);
         });
       })
       .catch((error) => {
         console.error(error);
       });
     // ..
-    function generateTweetHTML(tweet) {
+    function generateTweetHTML(tweet, tweetid) {
       return `
-        <div class="tweet"> 
+        <div class="tweet" onclick="navigateToCommentsPage(\'${tweetid}\')"> 
               <img
                 src="./images/profile-image.jpg"
                 class="tweet-avatar"
@@ -120,6 +121,13 @@ firebase.auth().onAuthStateChanged((user) => {
               </div>
             </div>`;
     }
+
+    window.navigateToCommentsPage = function (tweetid) {
+      console.log(tweetid);
+
+      // window.location.href = `../comments.html?tweetid=${tweetid}`;
+      window.location.href = `../comments.html?${tweetid}`;
+    };
   } else {
     window.location.href = "../signin.html";
   }
